@@ -16,8 +16,8 @@ export default {
         'glass-border': 'rgba(255, 255, 255, 0.2)',
       },
       fontFamily: {
-        'futuristic': ['Orbitron', 'monospace'],
-        'tech': ['Rajdhani', 'sans-serif'],
+        'futuristic': ['ui-monospace', 'SFMono-Regular', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
+        'tech': ['ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
       },
       animation: {
         'glow': 'glow 2s ease-in-out infinite alternate',

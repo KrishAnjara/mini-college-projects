@@ -120,10 +120,39 @@
 /* Mobile Optimizations */
 @media (max-width: 768px) {
   .glass-card {
-    @apply mx-4;
+    @apply mx-2 p-4;
   }
   
   .neon-text {
-    font-size: clamp(1.5rem, 5vw, 3rem);
+    font-size: clamp(1.2rem, 4vw, 2.5rem);
+  }
+  
+  .neon-button {
+    @apply px-4 py-2 text-sm;
+  }
+  
+  .cyber-input {
+    @apply text-sm py-2 px-3;
+  }
+}
+
+@media (max-width: 640px) {
+  .glass-card {
+    @apply mx-1 p-3;
+  }
+  
+  .neon-text {
+    font-size: clamp(1rem, 3.5vw, 2rem);
+  }
+  
+  .gradient-text {
+    font-size: clamp(1.2rem, 4vw, 2.5rem);
+  }
+}
+
+/* Tablet Optimizations */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .glass-card {
+    @apply mx-6;
   }
 }

@@ -23,10 +23,10 @@ function App() {
   const { studentInfo, appSettings } = useGlobalStore()
 
   useEffect(() => {
-    // Simulate loading time for dramatic effect
+    // Optimized loading time
     const timer = setTimeout(() => {
       setIsLoading(false)
-    }, 3000)
+    }, 1500) // Reduced from 3000ms to 1500ms
 
     return () => clearTimeout(timer)
   }, [])

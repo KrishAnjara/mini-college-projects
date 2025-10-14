@@ -3,103 +3,97 @@ import { Canvas, useFrame } from '@react-three/fiber'
 import { Points, PointMaterial } from '@react-three/drei'
 import * as THREE from 'three'
 
-// Animated particles component
+// Animated particles component - optimized and subtle
 function AnimatedParticles() {
   const ref = useRef()
   
-  // Generate random particle positions
+  // Generate fewer particles for better performance
   const particlesPosition = useMemo(() => {
-    const positions = new Float32Array(5000 * 3)
+    const positions = new Float32Array(1500 * 3) // Reduced from 5000 to 1500
     
-    for (let i = 0; i < 5000; i++) {
-      positions[i * 3] = (Math.random() - 0.5) * 100
-      positions[i * 3 + 1] = (Math.random() - 0.5) * 100
-      positions[i * 3 + 2] = (Math.random() - 0.5) * 100
+    for (let i = 0; i < 1500; i++) {
+      positions[i * 3] = (Math.random() - 0.5) * 80
+      positions[i * 3 + 1] = (Math.random() - 0.5) * 80
+      positions[i * 3 + 2] = (Math.random() - 0.5) * 80
     }
     
     return positions
   }, [])
 
-  // Animation loop
+  // Slower, smoother animation
   useFrame((state) => {
     if (ref.current) {
-      ref.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.1) * 0.1
-      ref.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.05) * 0.1
-      ref.current.rotation.z = Math.sin(state.clock.elapsedTime * 0.08) * 0.05
+      ref.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.02) * 0.05
+      ref.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.015) * 0.05
+      ref.current.rotation.z = Math.sin(state.clock.elapsedTime * 0.01) * 0.02
     }
   })
 
   return (
-    <group rotation={[0, 0, Math.PI / 4]}>
+    <group rotation={[0, 0, Math.PI / 6]}>
       <Points ref={ref} positions={particlesPosition} stride={3} frustumCulled={false}>
         <PointMaterial
           transparent
           color="#00f5ff"
-          size={0.8}
+          size={0.4} // Smaller particles
           sizeAttenuation={true}
           depthWrite={false}
-          opacity={0.6}
+          opacity={0.15} // Much more subtle
         />
       </Points>
     </group>
   )
 }
 
-// Floating geometric shapes
+// Floating geometric shapes - more subtle and optimized
 function FloatingShapes() {
   const groupRef = useRef()
   
   useFrame((state) => {
     if (groupRef.current) {
-      groupRef.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.2) * 0.1
-      groupRef.current.rotation.y = state.clock.elapsedTime * 0.05
+      groupRef.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.03) * 0.02
+      groupRef.current.rotation.y = state.clock.elapsedTime * 0.01
     }
   })
 
   return (
     <group ref={groupRef}>
-      {/* Wireframe Torus */}
-      <mesh position={[-20, 10, -30]}>
-        <torusGeometry args={[3, 1, 8, 16]} />
-        <meshBasicMaterial color="#bf00ff" wireframe />
+      {/* Wireframe Torus - more subtle */}
+      <mesh position={[-25, 8, -40]}>
+        <torusGeometry args={[2, 0.5, 6, 12]} />
+        <meshBasicMaterial color="#bf00ff" wireframe transparent opacity={0.1} />
       </mesh>
       
-      {/* Wireframe Octahedron */}
-      <mesh position={[25, -15, -25]}>
-        <octahedronGeometry args={[2]} />
-        <meshBasicMaterial color="#39ff14" wireframe />
+      {/* Wireframe Octahedron - more subtle */}
+      <mesh position={[30, -12, -35]}>
+        <octahedronGeometry args={[1.5]} />
+        <meshBasicMaterial color="#39ff14" wireframe transparent opacity={0.1} />
       </mesh>
       
-      {/* Wireframe Icosahedron */}
-      <mesh position={[-15, -20, -40]}>
-        <icosahedronGeometry args={[1.5]} />
-        <meshBasicMaterial color="#ff10f0" wireframe />
-      </mesh>
-      
-      {/* Wireframe Tetrahedron */}
-      <mesh position={[30, 20, -35]}>
-        <tetrahedronGeometry args={[2.5]} />
-        <meshBasicMaterial color="#00f5ff" wireframe />
+      {/* Wireframe Icosahedron - more subtle */}
+      <mesh position={[-20, -25, -50]}>
+        <icosahedronGeometry args={[1]} />
+        <meshBasicMaterial color="#ff10f0" wireframe transparent opacity={0.08} />
       </mesh>
     </group>
   )
 }
 
-// Grid lines for cyber effect
+// Grid lines for cyber effect - very subtle
 function CyberGrid() {
   const gridRef = useRef()
   
   useFrame((state) => {
     if (gridRef.current) {
-      gridRef.current.material.opacity = 0.1 + Math.sin(state.clock.elapsedTime) * 0.05
+      gridRef.current.material.opacity = 0.03 + Math.sin(state.clock.elapsedTime * 0.5) * 0.02
     }
   })
 
   return (
     <gridHelper
       ref={gridRef}
-      args={[100, 20, '#00f5ff', '#00f5ff']}
-      position={[0, -30, 0]}
+      args={[80, 15, '#00f5ff', '#00f5ff']}
+      position={[0, -35, 0]}
     />
   )
 }
@@ -110,19 +104,20 @@ const ParticleBackground = () => {
       <Canvas
         camera={{ position: [0, 0, 30], fov: 75 }}
         style={{ background: 'transparent' }}
+        performance={{ min: 0.5 }} // Performance optimization
       >
-        {/* Ambient lighting */}
-        <ambientLight intensity={0.1} />
-        <pointLight position={[10, 10, 10]} intensity={0.3} color="#00f5ff" />
-        <pointLight position={[-10, -10, -10]} intensity={0.2} color="#bf00ff" />
+        {/* Very subtle ambient lighting */}
+        <ambientLight intensity={0.05} />
+        <pointLight position={[15, 15, 15]} intensity={0.1} color="#00f5ff" />
+        <pointLight position={[-15, -15, -15]} intensity={0.08} color="#bf00ff" />
         
-        {/* 3D Elements */}
+        {/* 3D Elements - optimized and subtle */}
         <AnimatedParticles />
         <FloatingShapes />
         <CyberGrid />
         
-        {/* Fog for depth */}
-        <fog attach="fog" args={['#0a0a0a', 50, 200]} />
+        {/* Fog for depth - more subtle */}
+        <fog attach="fog" args={['#0a0a0a', 40, 180]} />
       </Canvas>
     </div>
   )

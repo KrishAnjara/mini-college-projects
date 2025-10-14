@@ -78,18 +78,18 @@ const HomePage = () => {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-center mb-16"
+          className="text-center mb-8 md:mb-16 px-4"
         >
-          <div className="inline-flex items-center space-x-2 mb-6">
-            <Zap className="w-12 h-12 text-neon-blue animate-pulse" />
-            <h1 className="text-6xl font-futuristic neon-text">
+          <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-2 mb-4 md:mb-6">
+            <Zap className="w-8 h-8 sm:w-12 sm:h-12 text-neon-blue animate-pulse" />
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-futuristic neon-text">
               FUTURISTIC
             </h1>
           </div>
-          <h2 className="text-3xl font-tech gradient-text mb-6">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-tech gradient-text mb-4 md:mb-6">
             Mini Projects Suite
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
             Experience the future of web applications with our interactive 3D mini projects.
             Built with cutting-edge technology for the modern developer.
           </p>
@@ -100,25 +100,25 @@ const HomePage = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="glass-card p-8 mb-16 max-w-4xl mx-auto hologram-effect"
+          className="glass-card p-4 sm:p-6 md:p-8 mb-8 md:mb-16 max-w-4xl mx-auto hologram-effect"
         >
-          <div className="flex items-center justify-between flex-wrap gap-4">
-            <div className="flex items-center space-x-4">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-neon-blue to-neon-purple flex items-center justify-center">
-                <Code className="w-8 h-8 text-white" />
+          <div className="flex flex-col lg:flex-row items-center lg:justify-between gap-4 lg:gap-6">
+            <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-4 text-center sm:text-left">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-neon-blue to-neon-purple flex items-center justify-center">
+                <Code className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
               <div>
-                <h3 className="text-2xl font-futuristic text-neon-blue">{studentInfo.name}</h3>
-                <p className="text-gray-300 font-tech">{studentInfo.rollNumber} • {studentInfo.college}</p>
-                <p className="text-sm text-neon-purple">{studentInfo.subject} Assignment</p>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-futuristic text-neon-blue">{studentInfo.name}</h3>
+                <p className="text-sm sm:text-base text-gray-300 font-tech">{studentInfo.rollNumber} • {studentInfo.college}</p>
+                <p className="text-xs sm:text-sm text-neon-purple">{studentInfo.subject} Assignment</p>
               </div>
             </div>
-            <div className="text-right">
-              <div className="flex items-center space-x-2 text-neon-green mb-2">
-                <Github className="w-5 h-5" />
-                <span className="font-tech">GitHub Management</span>
+            <div className="text-center lg:text-right">
+              <div className="flex items-center justify-center lg:justify-end space-x-2 text-neon-green mb-2">
+                <Github className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span className="font-tech text-sm sm:text-base">GitHub Management</span>
               </div>
-              <p className="text-sm text-gray-400">Advanced Repository Structure</p>
+              <p className="text-xs sm:text-sm text-gray-400">Advanced Repository Structure</p>
             </div>
           </div>
         </motion.div>

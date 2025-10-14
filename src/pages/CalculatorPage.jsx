@@ -238,16 +238,16 @@ const CalculatorPage = () => {
           <p className="text-xs text-gray-400">{studentInfo.rollNumber} • {studentInfo.college}</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 lg:gap-8">
           {/* 3D Calculator Display */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3 }}
-            className="glass-card p-6"
+            className="glass-card p-4 sm:p-6"
           >
-            <h2 className="text-xl font-tech text-neon-purple mb-4 text-center">3D Visualization</h2>
-            <div className="h-96 rounded-lg overflow-hidden bg-gradient-to-br from-dark-bg to-gray-900">
+            <h2 className="text-lg sm:text-xl font-tech text-neon-purple mb-4 text-center">3D Visualization</h2>
+            <div className="h-64 sm:h-80 lg:h-96 rounded-lg overflow-hidden bg-gradient-to-br from-dark-bg to-gray-900">
               <Canvas camera={{ position: [0, 0, 8], fov: 50 }}>
                 <ambientLight intensity={0.3} />
                 <pointLight position={[10, 10, 10]} intensity={0.5} color="#00f5ff" />
@@ -262,7 +262,7 @@ const CalculatorPage = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4 }}
-            className="glass-card p-6"
+            className="glass-card p-4 sm:p-6"
           >
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-xl font-tech text-neon-blue">Calculator Interface</h2>
@@ -304,7 +304,7 @@ const CalculatorPage = () => {
             </div>
 
             {/* Button Grid */}
-            <div className="grid grid-cols-4 gap-3">
+            <div className="grid grid-cols-4 gap-2 sm:gap-3">
               {buttons.map((button, index) => (
                 <motion.button
                   key={index}
@@ -315,7 +315,7 @@ const CalculatorPage = () => {
                   whileTap={{ scale: 0.95 }}
                   onClick={button.onClick}
                   className={`
-                    p-4 rounded-lg font-tech text-lg transition-all duration-200
+                    p-2 sm:p-3 md:p-4 rounded-lg font-tech text-sm sm:text-base md:text-lg transition-all duration-200
                     border border-glass-border hover:border-neon-blue/50
                     ${button.className || 'bg-glass-bg hover:bg-glass-bg/70'}
                     ${button.label === '0' ? 'col-span-2' : ''}

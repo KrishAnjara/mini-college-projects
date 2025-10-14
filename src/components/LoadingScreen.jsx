@@ -8,24 +8,22 @@ const LoadingScreen = () => {
   const { studentInfo } = useGlobalStore()
 
   const loadingTexts = [
-    'Initializing Quantum Processors...',
-    'Loading Neural Networks...',
-    'Calibrating 3D Matrices...',
-    'Establishing Secure Connections...',
-    'Synchronizing Data Streams...',
+    'Initializing System...',
+    'Loading Components...',
+    'Setting up Interface...',
     `Welcome, ${studentInfo.name}...`,
-    'Ready for Launch!'
+    'Ready!'
   ]
 
   useEffect(() => {
     const interval = setInterval(() => {
       setProgress(prev => {
-        const newProgress = prev + 2
+        const newProgress = prev + 4 // Faster loading
         const textIndex = Math.floor((newProgress / 100) * loadingTexts.length)
         setCurrentText(loadingTexts[Math.min(textIndex, loadingTexts.length - 1)])
         return Math.min(newProgress, 100)
       })
-    }, 50)
+    }, 30) // Faster interval
 
     return () => clearInterval(interval)
   }, [])
@@ -35,16 +33,16 @@ const LoadingScreen = () => {
       {/* Animated Background */}
       <div className="absolute inset-0 cyber-grid opacity-20"></div>
       
-      {/* Matrix Rain Effect */}
+      {/* Subtle Matrix Effect - Reduced for performance */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
+        {[...Array(8)].map((_, i) => (
           <div
             key={i}
-            className="absolute text-neon-green text-xs opacity-30 matrix-char"
+            className="absolute text-neon-green text-xs opacity-20 matrix-char"
             style={{
-              left: `${i * 5}%`,
-              animationDelay: `${i * 0.1}s`,
-              animationDuration: `${3 + Math.random() * 2}s`
+              left: `${i * 12}%`,
+              animationDelay: `${i * 0.2}s`,
+              animationDuration: `${4 + Math.random()}s`
             }}
           >
             {String.fromCharCode(65 + Math.random() * 26)}

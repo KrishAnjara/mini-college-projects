@@ -57,19 +57,20 @@ futuristic-mini-projects/
 
 ### **Frontend Framework**
 - **React.js 18.2+** - Modern component-based architecture
-- **Vite** - Lightning-fast build tool and development server
+- **Vite** - Lightning-fast build tool with optimized chunking
 - **React Router DOM** - Client-side routing with smooth transitions
 
 ### **3D Graphics & Animation**
-- **Three.js** - WebGL-based 3D graphics engine
+- **Three.js** - WebGL-based 3D graphics engine (optimized for performance)
 - **React Three Fiber** - React renderer for Three.js
 - **React Three Drei** - Useful helpers for R3F
 - **Framer Motion** - Production-ready motion library
 
 ### **Styling & UI**
 - **Tailwind CSS** - Utility-first CSS framework
-- **Custom CSS Components** - Glassmorphism and neon effects
-- **Responsive Design** - Mobile-first approach
+- **System Fonts** - No external font loading for optimal performance
+- **Responsive Design** - Mobile-first approach with optimized breakpoints
+- **Glassmorphism Effects** - Subtle, performance-optimized visual effects
 - **Lucide React** - Beautiful, customizable icons
 
 ### **State Management**
@@ -235,16 +236,18 @@ const useGlobalStore = create(persist(
 ## 🚀 **Performance Optimization**
 
 ### **Bundle Optimization**
-- **Code Splitting**: Lazy loading of components
+- **Code Splitting**: Manual chunks for vendor, three.js, and motion libraries
 - **Tree Shaking**: Unused code elimination
-- **Asset Optimization**: Compressed images and fonts
+- **System Fonts**: No external font loading for faster initial load
+- **Optimized Build**: Sourcemaps disabled, reduced bundle size
 - **Caching Strategy**: Efficient browser caching
 
 ### **3D Performance**
-- **LOD System**: Level-of-detail for 3D models
-- **Frustum Culling**: Render only visible objects
-- **Texture Optimization**: Compressed texture formats
-- **Frame Rate Management**: Consistent 60fps target
+- **Reduced Particles**: Optimized from 5000 to 1500 particles (70% reduction)
+- **Subtle Effects**: Lower opacity (0.15) and slower animations to reduce GPU load
+- **Performance Canvas**: Canvas performance settings for frame rate management
+- **Optimized Lighting**: Reduced light intensity for better performance
+- **Faster Loading**: Reduced loading time from 3s to 1.5s
 
 ## 🧪 **Testing Strategy**
 
