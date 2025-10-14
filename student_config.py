@@ -2,9 +2,9 @@
 # Configuration file containing student information
 # This file is imported by all mini projects to display student details
 
-STUDENT_NAME = "Your Name"
-ROLL_NUMBER = "Your Roll Number"
-COLLEGE = "Your College Name"
+STUDENT_NAME = "Aditya Chandorkar"
+ROLL_NUMBER = "FAI24008"
+COLLEGE = "Elphinstone College"
 
 def get_student_header():
     """
