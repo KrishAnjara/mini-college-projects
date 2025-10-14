@@ -134,6 +134,10 @@ dmypy.json
 # bank_transaction_system/accounts.json
 # todo_tool/tasks.txt
 
+# React/Vite specific
+dist/
+.vite/
+
 # IDE and Editor files
 .vscode/
 .idea/
