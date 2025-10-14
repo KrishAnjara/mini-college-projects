@@ -3,7 +3,7 @@
 **Student Name:** Aditya Chandorkar  
 **Roll Number:** FAI24008  
 **College:** Elphinstone College  
-**Subject:** Python Programming  
+**Subject:** Github Management  
 **Assignment:** Console-Based Python Applications
 
 ---
