@@ -4,13 +4,13 @@
 **Roll Number:** FAI24008  
 **College:** Elphinstone College  
 **Subject:** Github Management  
-**Assignment:** Console-Based Python Applications
 
 ---
 
 ## 📋 Assignment Overview
 
-This assignment consists of four beginner-friendly console-based Python applications that demonstrate fundamental programming concepts including file handling, data validation, user interface design, and object-oriented programming principles.
+This project repo contains four simple Python console applications — a Calculator, Student Grade System, Bank Transaction Manager, and To-Do List Tool. All projects share a config file with the student’s name, roll number, and college, shown in every program. The goal is to demonstrate basic programming, file handling, and GitHub version control for a college assignment.
+
 
 ## 📁 Project Structure
 
@@ -382,9 +382,7 @@ Through this assignment, I have successfully demonstrated:
 - **Submitted by:** Aditya Chandorkar
 - **Roll Number:** FAI24008
 - **College:** Elphinstone College
-- **Submission Date:** October 2024
 - **Programming Language:** Python 3
 - **Total Projects:** 4 Console Applications
-- **Repository:** Private Academic Project
-
+ 
 **Declaration:** This assignment has been completed independently and demonstrates my understanding of Python programming concepts, file handling, data validation, and software development practices.
