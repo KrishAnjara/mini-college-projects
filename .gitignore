@@ -159,3 +159,7 @@ Thumbs.db
 *.temp
 *.bak
 *.backup
+
+
+node_modules/
+.eslintrc.cjs
