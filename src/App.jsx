@@ -14,6 +14,8 @@ import CalculatorPage from './pages/CalculatorPage'
 import GradeSystemPage from './pages/GradeSystemPage'
 import BankSystemPage from './pages/BankSystemPage'
 
+import { SpeedInsights } from '@vercel/speed-insights/react';
+
 // Store
 import useGlobalStore from './store/globalConfig'
 
@@ -82,6 +84,7 @@ function App() {
             transition: filter 0.3s ease;
           }
         `}</style>
+       <SpeedInsights />
       </div>
     </Router>
   )
