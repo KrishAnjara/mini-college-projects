@@ -115,8 +115,8 @@ const HomePage = () => {
             </div>
             <div className="text-center lg:text-right">
               <div className="flex items-center justify-center lg:justify-end space-x-2 text-neon-green mb-2">
-                <Github className="w-4 h-4 sm:w-5 sm:h-5" />
-                <span className="font-tech text-sm sm:text-base">GitHub Management</span>
+                <Python className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span className="font-tech text-sm sm:text-base">Python Programming</span>
               </div>
               <p className="text-xs sm:text-sm text-gray-400">Advanced Repository Structure</p>
             </div>
@@ -225,7 +225,7 @@ const HomePage = () => {
             Built with ❤️ by {studentInfo.name} • {new Date().getFullYear()}
           </p>
           <p className="text-sm mt-2">
-            Demonstrating advanced GitHub management and modern web development
+            Demonstrating advanced Github Management and modern web development
           </p>
         </motion.div>
       </div>
