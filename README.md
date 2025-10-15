@@ -3,7 +3,7 @@
 **Student:** Aditya Chandorkar  
 **Roll Number:** FAI24008  
 **College:** Elphinstone College  
-**Subject:** Github Management  
+**Subject:** Python Programming
 **Assignment:** Advanced Web Application Development with Repository Management
 
 ---
@@ -26,7 +26,7 @@ This repository exemplifies professional GitHub management through:
 ## 🏗️ **Repository Architecture**
 
 ```
-futuristic-mini-projects/
+mini-projects/
 ├── 📁 src/
 │   ├── 📁 components/          # Reusable UI components
 │   │   ├── LoadingScreen.jsx   # 3D loading animation
@@ -394,7 +394,7 @@ The project serves as both a functional web application and a demonstration of a
 **Developed by:** Aditya Chandorkar  
 **Roll Number:** FAI24008  
 **College:** Elphinstone College  
-**Subject:** Github Management  
+**Subject:** Python Programming
 **Academic Year:** 2025-26
 **Repository:** [GitHub - Futuristic Mini Projects](https://github.com/KrishAnjara/mini-college-projects)
 
