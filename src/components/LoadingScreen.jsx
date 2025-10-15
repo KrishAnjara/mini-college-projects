@@ -18,12 +18,12 @@ const LoadingScreen = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setProgress(prev => {
-        const newProgress = prev + 4 // Faster loading
+        const newProgress = prev + 1 // Faster loading
         const textIndex = Math.floor((newProgress / 100) * loadingTexts.length)
         setCurrentText(loadingTexts[Math.min(textIndex, loadingTexts.length - 1)])
         return Math.min(newProgress, 100)
       })
-    }, 30) // Faster interval
+    }, 35) // Faster interval
 
     return () => clearInterval(interval)
   }, [])
