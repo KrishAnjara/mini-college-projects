@@ -76,7 +76,7 @@ const LoadingScreen = () => {
         >
           <div className="text-sm text-gray-300 space-y-1">
             <p><span className="text-neon-blue">Student:</span> {studentInfo.name}</p>
-            <p><span className="text-neon-blue">Roll:</span> {studentInfo.rollNumber}</p>
+            <p><span className="text-neon-blue">Roll Number:</span> {studentInfo.rollNumber}</p>
             <p><span className="text-neon-blue">College:</span> {studentInfo.college}</p>
             <p><span className="text-neon-blue">Subject:</span> {studentInfo.subject}</p>
           </div>

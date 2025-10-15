@@ -28,7 +28,7 @@ const StudentConfigPanel = ({ isOpen, onClose }) => {
 
   const [formData, setFormData] = useState(studentInfo)
   const [settings, setSettings] = useState(appSettings)
-  const [activeTab, setActiveTab] = useState('student')
+  const [activeTab, setActiveTab] = useState('settings')
   const [showConfirmReset, setShowConfirmReset] = useState(false)
 
   const handleSave = () => {
@@ -80,7 +80,6 @@ const StudentConfigPanel = ({ isOpen, onClose }) => {
   }
 
   const tabs = [
-    { id: 'student', label: 'Student Info', icon: User },
     { id: 'settings', label: 'App Settings', icon: Settings },
     { id: 'data', label: 'Data Management', icon: Shield }
   ]
@@ -141,84 +140,6 @@ const StudentConfigPanel = ({ isOpen, onClose }) => {
 
         {/* Content */}
         <div className="p-6 overflow-y-auto max-h-96">
-          {/* Student Info Tab */}
-          {activeTab === 'student' && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="space-y-4"
-            >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-tech text-neon-blue mb-2">
-                    <User className="w-4 h-4 inline mr-2" />
-                    Full Name
-                  </label>
-                  <input
-                    type="text"
-                    value={formData.name}
-                    onChange={(e) => setFormData({...formData, name: e.target.value})}
-                    className="cyber-input w-full"
-                    placeholder="Enter your full name"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-tech text-neon-blue mb-2">
-                    <Hash className="w-4 h-4 inline mr-2" />
-                    Roll Number
-                  </label>
-                  <input
-                    type="text"
-                    value={formData.rollNumber}
-                    onChange={(e) => setFormData({...formData, rollNumber: e.target.value})}
-                    className="cyber-input w-full"
-                    placeholder="Enter your roll number"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-tech text-neon-blue mb-2">
-                    <School className="w-4 h-4 inline mr-2" />
-                    College
-                  </label>
-                  <input
-                    type="text"
-                    value={formData.college}
-                    onChange={(e) => setFormData({...formData, college: e.target.value})}
-                    className="cyber-input w-full"
-                    placeholder="Enter your college name"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-tech text-neon-blue mb-2">
-                    <Mail className="w-4 h-4 inline mr-2" />
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
-                    className="cyber-input w-full"
-                    placeholder="Enter your email"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-tech text-neon-blue mb-2">Subject</label>
-                <input
-                  type="text"
-                  value={formData.subject}
-                  onChange={(e) => setFormData({...formData, subject: e.target.value})}
-                  className="cyber-input w-full"
-                  placeholder="Enter subject name"
-                />
-              </div>
-            </motion.div>
-          )}
-
           {/* App Settings Tab */}
           {activeTab === 'settings' && (
             <motion.div
@@ -350,7 +271,7 @@ const StudentConfigPanel = ({ isOpen, onClose }) => {
               className="neon-button flex items-center space-x-2"
             >
               <Save className="w-4 h-4" />
-              <span>Save Changes</span>
+              <span>Apply</span>
             </button>
           </div>
         </div>

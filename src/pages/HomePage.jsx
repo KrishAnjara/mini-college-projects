@@ -218,13 +218,13 @@ const HomePage = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.2, duration: 0.6 }}
+          transition={{ delay: 4, duration: 0.6 }}
           className="text-center mt-16 text-gray-400"
         >
-          <p className="font-tech">
+          <p className="font-tech font-bold">
             Built with ❤️ by {studentInfo.name} • {new Date().getFullYear()}
           </p>
-          <p className="text-sm mt-2">
+          <p className="text-sm mt-2 font-bold">
             Demonstrating advanced Github Management and modern web development
           </p>
         </motion.div>
