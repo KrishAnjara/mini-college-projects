@@ -52,7 +52,6 @@ function Calculator3D({ display, isCalculating }) {
         color="#00f5ff"
         anchorX="center"
         anchorY="middle"
-        font="/fonts/orbitron-regular.woff"
       >
         {display || '0'}
       </Text>
