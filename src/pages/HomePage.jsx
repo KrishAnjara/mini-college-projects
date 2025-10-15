@@ -9,7 +9,7 @@ import {
   Zap,
   Code,
   Sparkles,
-  Github
+  Python
 } from 'lucide-react'
 import useGlobalStore from '../store/globalConfig'
 
