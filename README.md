@@ -45,7 +45,6 @@ futuristic-mini-projects/
 │   ├── 📁 hooks/              # Custom React hooks
 │   ├── 📁 utils/              # Utility functions
 │   └── 📁 assets/             # Static assets
-├── 📁 legacy-python-projects/  # Original Python implementations
 ├── 📄 package.json            # Dependencies and scripts
 ├── 📄 vite.config.js          # Vite configuration
 ├── 📄 tailwind.config.js      # Tailwind CSS configuration
@@ -396,7 +395,7 @@ The project serves as both a functional web application and a demonstration of a
 **Roll Number:** FAI24008  
 **College:** Elphinstone College  
 **Subject:** Github Management  
-**Academic Year:** 2024  
+**Academic Year:** 2025-26
 **Repository:** [GitHub - Futuristic Mini Projects](https://github.com/KrishAnjara/mini-college-projects)
 
 **Technologies Used:** React.js, Three.js, Tailwind CSS, Framer Motion, Zustand, Vite  
