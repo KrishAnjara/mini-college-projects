@@ -10,7 +10,7 @@ const useGlobalStore = create(
         name: 'Aditya Chandorkar',
         rollNumber: 'FAI24008',
         college: 'Elphinstone College',
-        subject: 'Github Management',
+        subject: 'Python Programming',
         email: 'aditya.chandorkar@elphinstone.edu',
         avatar: null,
         theme: 'cyber-blue'
