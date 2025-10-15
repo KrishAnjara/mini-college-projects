@@ -26,7 +26,7 @@ function App() {
     // Optimized loading time
     const timer = setTimeout(() => {
       setIsLoading(false)
-    }, 1500) // Reduced from 3000ms to 1500ms
+    }, 4000) // Reduced from 3000ms to 1500ms
 
     return () => clearTimeout(timer)
   }, [])
